@@ -5,11 +5,16 @@ import { ComponenteFlecha, ComponenteClase } from "./tiposcomponentes";
 // Función componente se combina html y javaScript, el return debe llevar parentesis
 function App() {
   let numero = 1;
+  let datos = {
+    "nombre": "Jairo Arango",
+    "salario": 3000000,
+    "profesion": "psicologo"
+  }
   return (
     <>
-      <ComponenteFuncional />
-      <ComponenteFlecha />
-      <ComponenteClase />
+      <ComponenteClase info = {datos} />
+      <ComponenteFuncional info = {datos} saludo = "Hola"/>
+      <ComponenteFlecha info = {datos} />
       <h1>Hola {nombre()} desde React {numero + 3}</h1>
       {/* Conectar html con js con {} */}
     </>
